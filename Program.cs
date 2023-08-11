@@ -25,9 +25,10 @@ namespace Calculator
 
             float resultado = v1 + v2;
             //Console.WriteLine("O resultado da soma é " + resultado);
-            Console.WriteLine($"O resultado da soma é {resultado});hj
+            Console.WriteLine($"O resultado da soma é {resultado});
             //Console.WriteLine($"O resultado da soma é {v1 + v2});
             //Console.WriteLine("O resultado da soma é " + (v1 + v2));
+            Console.ReadKey();
         }
 
         static void Subtracao()
@@ -44,7 +45,7 @@ namespace Calculator
 
             float resultado = v1 - v2;
             Console.WriteLine($"O resultado é {resultado}");
-            Console.Read
+            Console.ReadKey();
 
         }
     }

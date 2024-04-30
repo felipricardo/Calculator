@@ -20,6 +20,7 @@ namespace Calculator
             Console.WriteLine("3 - Divisão");
             Console.WriteLine("4 - Multiplicação");
             Console.WriteLine("5 - Raiz Quadrada");
+            Console.WriteLine("7 - Potenciação");
             Console.WriteLine("6 - Sair");
 
             Console.WriteLine("-------------");
@@ -33,7 +34,8 @@ namespace Calculator
                 case 2: Subtracao(); break;
                 case 3: Divisao(); break;
                 case 4: Multiplicacao(); break;
-                case 5: RaizQuadrada(); break; // Chama a nova função
+                case 5: RaizQuadrada(); break;
+                case 7: Potenciacao(); break;
                 case 6: System.Environment.Exit(0); break;
                 default: Menu(); break;
             }
@@ -125,6 +127,24 @@ namespace Calculator
 
             double resultado = Math.Sqrt(valor);
             Console.WriteLine($"A raiz quadrada de {valor} é {resultado}");
+            Console.ReadKey();
+            Menu();
+        }
+
+        static void Potenciacao()
+        {
+            Console.Clear();
+
+            Console.WriteLine("Digite a base:");
+            double baseNum = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o expoente:");
+            double expoente = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("");
+
+            double resultado = Math.Pow(baseNum, expoente);
+            Console.WriteLine($"O resultado da potenciação é {resultado}");
             Console.ReadKey();
             Menu();
         }
